@@ -5,6 +5,7 @@ import two from "./images/slideshow/section-1-bg-2.jpg";
 import three from "./images/slideshow/section-1-bg-3.jpg";
 import four from "./images/slideshow/section-1-bg-4.jpg";
 import five from "./images/slideshow/section-1-bg-5.jpg";
+import iphone from "./images/iPhone 12/iphone.png";
 
 const arrOfImages = [one, two, three, four, five];
 
@@ -61,6 +62,16 @@ function Hero() {
 
       {/* Hero */}
       <div className="hero-container">
+        <div className="cube-wrapper">
+          <div className="cube">
+            <div className="front-side">
+              <img src={iphone} alt="iphone" />
+            </div>
+            <div className="back-side">
+              <i class="fab fa-apple fa-5x"></i>
+            </div>
+          </div>
+        </div>
         <div className="right">
           <h1> &#8592; BEST GIFT</h1>
           <span>"Creativity is just connecting things."</span>

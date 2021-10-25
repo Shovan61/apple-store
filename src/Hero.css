@@ -31,7 +31,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .right {
@@ -64,4 +64,105 @@
 }
 .right button:active {
   top: 1px;
+}
+.cube-wrapper {
+  perspective: 100rem;
+}
+
+.cube {
+  height: 55vh;
+  width: 15vw;
+  transform-style: preserve-3d;
+  transform: rotateY(-91deg);
+}
+
+.front-side {
+  height: 100%;
+  width: 100%;
+  padding: 2.5rem;
+  background-color: white;
+  transform: translateZ(5rem);
+  position: absolute;
+  transform-style: preserve-3d;
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.2rem #eee;
+}
+
+.front-side img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.front-side::before {
+  content: "";
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.2rem #eee;
+}
+.front-side::after {
+  content: "";
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.2rem #eee;
+}
+
+.back-side {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 2.5rem;
+  background-color: white;
+  transform: translateZ(-5rem);
+  transform-style: preserve-3d;
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.2rem #eee;
+}
+
+.back-side i {
+  transform: rotateY(180deg);
+}
+
+.back-side::before {
+  content: "iPhone";
+  width: 10rem;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(-90deg);
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.2rem #eee;
+}
+.back-side::after {
+  content: "iPhone";
+  width: 10rem;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotateY(90deg);
+  transform-origin: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.2rem #eee;
 }
